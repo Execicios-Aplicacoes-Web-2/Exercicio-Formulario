@@ -10,12 +10,13 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
     <div class="container">
-      <h1>ENTRE EM CONTATO</h1>
-      <p>Tem alguma sugestão ou pergunta? Deixe uma mensagem</p>
+      <h1>FORMULÁRIO DE CADASTRO</h1>
+      <p>Informe os seus dados para cadastro</p>
       <form>
         <div class="row">
           <div class="column">
@@ -23,53 +24,54 @@
             <input
               type="text"
               id="fullname"
+              class="content"
               placeholder="Insira seu nome"
               autocomplete="off"
               required
             />
           </div>
           <div class="column">
-            <label for="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Insira seu email"
-              autocomplete="off"
-              required
-            />
-          </div>
-        </div>
-        <div class="row">
-          <div class="column">
-            <label for="telefone">Telefone</label>
-            <input
-              type="tel"
-              id="telefone"
-              placeholder="Insira seu telefone"
-              autocomplete="off"
-              data-js="phone"
-              required
-            />
-          </div>
-          <div class="column">
-            <label for="contact">CPF</label>
+            <label for="address">Endereço</label>
             <input
               type="text"
-              id="cpf"
-              placeholder="Insira seu CPF"
+              id="address"
+              class="content"
+              placeholder="Insira seu endereço"
               autocomplete="off"
-              data-js="cpf"
               required
             />
           </div>
         </div>
         <div class="row">
           <div class="column">
-            <label for="issue">Assunto</label>
+            <label for="number">Número</label>
+            <input
+              type="number"
+              id="number"
+              class="content"
+              placeholder="Insira o número"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <div class="column">
+            <label for="complement">Complemento</label>
             <input
               type="text"
-              id="assunto"
-              placeholder="Insira o assunto"
+              id="complement"
+              class="content"
+              placeholder="Insira o complemento"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <div class="column">
+            <label for="cep">CEP</label>
+            <input
+              type="text"
+              id="cep"
+              class="content"
+              placeholder="Insira seu CEP"
               autocomplete="off"
               required
             />
@@ -77,21 +79,56 @@
         </div>
         <div class="row">
           <div class="column">
-            <label for="issue">Sugestão/Pergunta</label>
-            <textarea
-              id="sugestao"
-              cols="30"
-              rows="3"
-              placeholder="Insira sua sugestão ou pergunta"
+            <label for="district">Bairro</label>
+            <input
+              type="text"
+              id="district"
+              class="content"
+              placeholder="Insira o bairro"
               autocomplete="off"
               required
-            ></textarea>
+            />
+          </div>
+          <div class="column">
+            <label for="city">Cidade</label>
+            <input
+              type="text"
+              id="city"
+              class="content"
+              list="citys"
+              placeholder="Selecione a cidade"
+              autocomplete="off"
+              required
+            />
+            <datalist id="citys">
+              <option value="São Paulo" label="São Paulo"></option>
+              <option value="Diadema" label="Diadema"></option>
+              <option
+                value="São Bernardo do Campo"
+                label="São Bernardo do Campo"
+              ></option>
+              <option value="Santo André" label="Santo André"></option>
+              <option value="Mauá" label="Mauá"></option>
+            </datalist>
+          </div>
+          <div class="column">
+            <label for="state">Estado</label>
+            <input
+              type="text"
+              id="state"
+              class="content"
+              autocomplete="off"
+              value="SP"
+              readonly
+              required
+            />
           </div>
         </div>
-        <button id="button">Enviar</button>
+        <input type="reset" class="button" value="Limpar" id="reset" />
+        <button type="submit" class="button" id="send">Enviar</button>
       </form>
     </div>
 
-    <script src="./script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
